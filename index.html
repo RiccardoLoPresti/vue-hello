@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"> 
   <!-- SCRIPT -->
   <script src="js/app.js" defer></script>
   <!-- VUE -->
@@ -19,7 +23,22 @@
 
   <div id="app">
     <h1 :class="colorText">{{msg}}</h1>
-    <button @click="colorText = 'red'">CLICCAMI PER CAMBIARE COLORE!</button>
+    <button @click="colorText = 'red'">CLICCAMI PER DIVENTARE METAL!</button>
+    <br>
+    <img :src="img" alt="" v-show="isShow">
+    <p v-show="!isShow">
+      <h3 v-show="!isShow">Black Sabbath</h3>
+      <span v-show="!isShow">I Black Sabbath sono stati tra i primi gruppi heavy metal della storia e hanno contribuito in modo significativo allo sviluppo del genere.
+      </span> 
+      <h3 v-show="!isShow">Gojira</h3>
+      <span v-show="!isShow">I Gojira, noti soprattutto per i loro particolari testi legati a tematiche ambientaliste, sono stati uno dei pochi gruppi che in un breve periodo di tempo sono riusciti ad emergere da circoli di nicchia fino a raggiungere un successo di considerevole entità tra i seguaci del metal estremo.
+      </span> 
+    </p>
+    <br>
+    <button @click="img = img2">CLICCAMI PER CAMBIARE IMMAGINE!</button>
+    <br>
+    <button @click="nascondiImg()">CLICCAMI PER LEGGERE LA DIDASCALIA!</button>
+
   </div>
   
 </body>

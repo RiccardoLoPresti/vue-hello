@@ -12,7 +12,16 @@ createApp({
   data(){
     return{
       msg:'Ciao sto usando Vue!',
-      colorText:''
+      colorText:'',
+      fontStyle:'',
+      isShow: 'true',
+      img: 'img/blacksabbath.jpg',
+      img2: 'img/gojira.jpg'
+    }
+  },
+  methods:{
+    nascondiImg(){
+      this.isShow = false;
     }
   }
 }).mount('#app');
